@@ -1,0 +1,171 @@
+body {
+    font-family: 'FOT-RodinNTLG Pro DB', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'FOT-RodinNTLG Pro DB';
+    src: url('/fonts/FOT-RodinNTLG Pro DB.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Aplicar la fuente localmente al componente */
+:host {
+    font-family: 'FOT-RodinNTLG Pro DB', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border: none; /* Eliminar bordes en el contenedor */
+}
+
+.content {
+    width: 80%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra de caja en modo claro */
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease; /* Transición para el cambio de sombra */
+}
+
+.left,
+.right {
+    flex: 1;
+    padding: 20px;
+}
+
+.left {
+    border-right: 1px solid #ccc;
+}
+
+.right {
+    padding-left: 40px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-group input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group .success {
+    color: green;
+    font-size: 14px;
+}
+
+.form-group .error {
+    color: red;
+    font-size: 14px;
+}
+
+.form-group .error-message {
+    color: red;
+    font-size: 14px;
+}
+
+.right .info {
+    margin-bottom: 20px;
+}
+
+.right .info label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.right .info p {
+    margin: 10px 0;
+    font-size: 11px;
+    padding-left: 15px;
+}
+
+.right .color-box {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom right, #ff00ff, #ff0000);
+}
+
+.separator {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Modo oscuro */
+.container.dark-mode {
+    background-color: #333;
+    color: #fff;
+    border: none; /* Eliminar borde en el modo oscuro */
+}
+
+.container.dark-mode .left,
+.container.dark-mode .right {
+    border-color: white;
+}
+
+
+
+/* Sombra en modo oscuro (blanca) */
+body.dark-mode .content {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .separator {
+    border-top: 1px solid #555;
+}
+
+/* Eliminar bordes en body y .container */
+body, .container {
+    border: none;
+}
+
+body.dark-mode, .container.dark-mode {
+    background-color: #333; /* Fondo oscuro para toda la página */
+    border: none;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .container {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  .light-mode {
+    background-color: #ffffff;
+    color: #000000;
+  }

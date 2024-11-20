@@ -1,0 +1,11 @@
+.info p {
+    margin: 10px 0;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom right, #ff00ff, #ff0000);
+}

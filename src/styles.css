@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'FOT-RodinNTLG Pro DB';
+  src: url('/fonts/FOT-RodinNTLG Pro DB.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Aplicar la fuente globalmente */
+body {
+  font-family: 'FOT-RodinNTLG Pro DB', sans-serif;
+}

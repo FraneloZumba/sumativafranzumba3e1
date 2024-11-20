@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="content">
+        <div class="left">
+            <h1>SUMATIVA</h1>
+            <div class="separator"></div>
+            <div class="form-group">
+                <label for="email">Correo</label>
+                <input type="email" id="email" [(ngModel)]="email" placeholder="Correo">
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" [(ngModel)]="password" placeholder="Contraseña">
+            </div>
+            <div class="form-group">
+                <label for="text">Texto</label>
+                <input type="text" id="text" [(ngModel)]="text" placeholder="Ingrese Texto">
+            </div>
+            <div class="separator"></div>
+            <div class="button">
+                <app-button-group
+                  [isDarkMode]="isDarkMode"
+                  (accept)="onAccept()"
+                  (cancel)="onCancel()"
+                  (primary)="onPrimary()"
+                  (secondary)="onSecondary()"
+                  (darkModeToggle)="onDarkModeToggle()">
+                </app-button-group>
+            </div>
+        </div>
+        <div class="right">
+            <app-viewer 
+                [email]="email" 
+                [password]="password" 
+                [text]="text">
+            </app-viewer>
+        </div>
+    </div>
+</div>

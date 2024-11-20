@@ -1,0 +1,85 @@
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Aceptar */
+.button-group .accept {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+}
+
+.button-group .accept:hover {
+    background-color: #45a049;
+}
+
+/* Cancelar */
+.button-group .cancel {
+    background-color: #f44336; /* Rojo */
+    color: white;
+    border: none;
+}
+
+.button-group .cancel:hover {
+    background-color: #e53935;
+}
+
+/* Primario */
+.button-group .primary {
+    background-color: #2196F3; /* Azul */
+    color: white;
+    border: none;
+}
+
+.button-group .primary:hover {
+    background-color: #1e88e5;
+}
+
+/* Secundario */
+.button-group .secondary {
+    background-color: #03A9F4; /* Azul claro */
+    color: white;
+    border: none;
+}
+
+.button-group .secondary:hover {
+    background-color: #039be5;
+}
+
+
+/* Estilos para modo oscuro */
+body.dark-mode .button-group button {
+    background-color: #555;  /* Fondo más oscuro */
+    color: #fff;             /* Texto blanco para visibilidad */
+}
+
+/* Estilos individuales para cada botón en modo oscuro */
+body.dark-mode .button-group .accept {
+    background-color: #45a049;
+}
+
+body.dark-mode .button-group .cancel {
+    background-color: #e53935;
+}
+
+body.dark-mode .button-group .primary {
+    background-color: #1e88e5;
+}
+
+body.dark-mode .button-group .secondary {
+    background-color: #039be5;
+}
+
+body.dark-mode .button-group button:hover {
+    opacity: 0.8;  /* Reduce la opacidad al pasar el ratón sobre los botones en modo oscuro */
+}
