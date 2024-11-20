@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="appearanceMode">
     <div class="content">
         <div class="left">
             <h1>SUMATIVA</h1>
@@ -17,21 +17,16 @@
             </div>
             <div class="separator"></div>
             <div class="button">
-                <app-button-group
-                  [isDarkMode]="isDarkMode"
-                  (accept)="onAccept()"
-                  (cancel)="onCancel()"
-                  (primary)="onPrimary()"
-                  (secondary)="onSecondary()"
-                  (darkModeToggle)="onDarkModeToggle()">
+                <app-button-group [isDarkMode]="isDarkMode" (accept)="onAccept()" (cancel)="onCancel()"
+                    (primary)="onPrimary()" (secondary)="onSecondary()" (darkModeToggle)="onDarkModeToggle()"
+                    (reset)="resetAppearance()"> 
                 </app-button-group>
+
             </div>
         </div>
         <div class="right">
-            <app-viewer 
-                [email]="email" 
-                [password]="password" 
-                [text]="text">
+            <app-viewer [email]="email" [password]="password" [text]="text" [isAccepted]="isAccepted"
+                [isCancelled]="isCancelled">
             </app-viewer>
         </div>
     </div>

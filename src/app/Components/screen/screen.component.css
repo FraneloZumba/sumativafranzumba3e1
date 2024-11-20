@@ -169,3 +169,103 @@ body {
     background-color: #ffffff;
     color: #000000;
   }
+
+  .container.wii-mode {
+    background-color: #ffffff; /* Fondo blanco */
+    font-family: 'Verdana', sans-serif; /* Estilo limpio y sans-serif */
+    border: 10px solid #cccccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container.wii-mode .content {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container.wii-mode .left,
+.container.wii-mode .right {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.container.sheikah-mode {
+    background-color: #0d1b2a; /* Azul oscuro */
+    color: #00ffcc; /* Letras y detalles azul brillante */
+    font-family: 'Sheikah', sans-serif; /* (Usar un estilo cercano si no tienes fuente personalizada) */
+    border: 2px solid #00ffcc;
+}
+
+.container.sheikah-mode .content {
+    background: #14202e;
+    box-shadow: 0 0 15px #00ffcc;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.container.sheikah-mode .left,
+.container.sheikah-mode .right {
+    background-color: #12263a;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+/* Netflix Mode */
+.container.netflix-mode {
+    background-color: #141414; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .container.netflix-mode h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #e50914; /* Rojo característico de Netflix */
+  }
+  
+  .container.netflix-mode .form-group label {
+    color: #e5e5e5; /* Gris claro */
+  }
+  
+  .container.netflix-mode input {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .container.netflix-mode input::placeholder {
+    color: #999999;
+  }
+  
+  .container.netflix-mode .button {
+    margin-top: 20px;
+  }
+  
+  .container.netflix-mode app-button-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .container.netflix-mode .right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .container {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .container.netflix-mode input {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  

@@ -1,15 +1,15 @@
-<div class="right">
-    <div class="info">
-        <label>Correo</label>
-        <p>{{ email }}</p>
-    </div>
-    <div class="info">
-        <label>Contraseña</label>
-        <p>{{ password }}</p>
-    </div>
-    <div class="info">
-        <label>Texto</label>
-        <p>{{ text }}</p>
-    </div>
-    <div class="color-box"></div>
+<div class="info">
+    <label>Correo</label>
+    <p>{{ email }}</p>
+</div>
+<div class="info">
+    <label>Contraseña</label>
+    <p>{{ password }}</p>
+</div>
+<div class="info">
+    <label>Texto</label>
+    <p>{{ text }}</p>
+</div>
+<div class="color-box" [ngClass]="{'accepted': isAccepted, 'cancelled': isCancelled}">
+    <span>{{ isAccepted ? '✅' : isCancelled ? '❌' : '' }}</span>
 </div>

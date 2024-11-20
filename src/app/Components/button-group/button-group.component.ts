@@ -3,8 +3,8 @@ import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-button-group',
-  standalone: true, // Marca el componente como independiente
-  imports: [NgIf],  // Importamos NgIf
+  standalone: true, 
+  imports: [NgIf],  
   template: `
     <div class="button-group">
       <button (click)="onAccept()">Aceptar</button>
@@ -15,7 +15,8 @@ import { NgIf } from '@angular/common';
         <span *ngIf="isDarkMode; else lightIcon">🌙</span>
         <ng-template #lightIcon>☀️</ng-template>
       </button>
-    </div>
+      <button (click)="reset.emit()">Resetear</button>
+</div>
   `,
   styleUrls: ['./button-group.component.css']
 })
@@ -26,6 +27,7 @@ export class ButtonGroupComponent {
   @Output() primary = new EventEmitter<void>();
   @Output() secondary = new EventEmitter<void>();
   @Output() darkModeToggle = new EventEmitter<void>();
+  @Output() reset = new EventEmitter<void>();
 
   onAccept() {
     this.accept.emit();
@@ -45,5 +47,9 @@ export class ButtonGroupComponent {
 
   onDarkModeToggle() {
     this.darkModeToggle.emit();
+  }
+
+  onReset() {
+    this.reset.emit();
   }
 }

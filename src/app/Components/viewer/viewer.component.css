@@ -1,11 +1,52 @@
-.info p {
-    margin: 10px 0;
-    font-size: 12px;
-    padding-left: 15px;
-}
-
 .color-box {
     width: 100px;
     height: 100px;
     background: linear-gradient(to bottom right, #ff00ff, #ff0000);
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease; /* Transición suave */
+    position: relative;
+  }
+  
+  /* Check verde */
+  .color-box.accepted {
+    background: #4caf50; /* Verde */
+  }
+  
+  .color-box.accepted::before {
+    content: '';
+    width: 40px;
+    height: 20px;
+    border-left: 5px solid white;
+    border-bottom: 5px solid white;
+    transform: rotate(-45deg);
+    position: absolute;
+    transition: all 0.5s ease;
+  }
+  
+  /* X roja */
+  .color-box.cancelled {
+    background: #f44336; /* Rojo */
+  }
+  
+  .color-box.cancelled::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+  }
+  
+  .color-box.cancelled::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+  }
+  

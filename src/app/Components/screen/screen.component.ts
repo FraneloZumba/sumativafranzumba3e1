@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';  // Importar CommonModule
 import { FormsModule } from '@angular/forms';
 import { ButtonGroupComponent } from '../button-group/button-group.component';
 import { ViewerComponent } from '../viewer/viewer.component';
@@ -6,7 +7,7 @@ import { ViewerComponent } from '../viewer/viewer.component';
 @Component({
   selector: 'app-screen',
   standalone: true,
-  imports: [FormsModule, ButtonGroupComponent, ViewerComponent],
+  imports: [CommonModule, FormsModule, ButtonGroupComponent, ViewerComponent],  // Agregar CommonModule aquí
   templateUrl: './screen.component.html',
   styleUrls: ['./screen.component.css']
 })
@@ -15,6 +16,9 @@ export class ScreenComponent {
   password: string = '';
   text: string = '';
   isDarkMode: boolean = false;
+  isAccepted: boolean = false;
+  isCancelled: boolean = false;
+  appearanceMode: string = ''; // Propiedad para manejar la apariencia
 
   onDarkModeToggle() {
     this.isDarkMode = !this.isDarkMode;
@@ -22,8 +26,28 @@ export class ScreenComponent {
     document.querySelector('.container')?.classList.toggle('dark-mode', this.isDarkMode);
   }
 
-  onAccept() { console.log('Aceptar clicked'); }
-  onCancel() { console.log('Cancelar clicked'); }
-  onPrimary() { console.log('Primario clicked'); }
-  onSecondary() { console.log('Secundario clicked'); }
+  onAccept() {
+    this.isAccepted = true;
+    this.isCancelled = false;
+    console.log('Aceptar clicked');
+  }
+  
+  onCancel() {
+    this.isAccepted = false;
+    this.isCancelled = true;
+    console.log('Cancelar clicked');
+  }  
+
+  onPrimary() {
+    this.appearanceMode = 'netflix-mode'; // Cambiar a modo Netflix
+  }
+
+  onSecondary() {
+    this.appearanceMode = 'sheikah-mode'; // Cambia a modo Sheikah
+  }
+
+  resetAppearance() {
+    this.appearanceMode = ''; // Elimina cualquier clase aplicada
+  }
+  
 }

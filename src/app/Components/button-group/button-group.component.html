@@ -1,11 +1,11 @@
 <div class="button">
-    <button class="accept" (click)="onAccept()">Aceptar</button>
-    <button class="cancel" (click)="onCancel()">Cancelar</button>
-    <button class="primary" (click)="onPrimary()">Primario</button>
-    <button class="secondary" (click)="onSecondary()">Secundario</button>
-    <button (click)="onDarkModeToggle()">
-      <span *ngIf="isDarkMode; else lightIcon">🌙</span>
-      <ng-template #lightIcon>☀️</ng-template>
-    </button>
+  <button class="accept" (click)="onAccept()">Aceptar</button>
+  <button class="cancel" (click)="onCancel()">Cancelar</button>
+  <button class="primary" (click)="onPrimary()">Primario</button>
+  <button class="secondary" (click)="onSecondary()">Secundario</button>
+  <button (click)="onDarkModeToggle()">
+    <span *ngIf="isDarkMode; else lightIcon">🌙</span>
+    <ng-template #lightIcon>☀️</ng-template>
+  </button>
+  <button (click)="reset.emit()">Resetear</button>
 </div>
-  
